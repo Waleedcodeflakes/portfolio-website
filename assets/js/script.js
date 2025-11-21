@@ -257,3 +257,27 @@ detailClose.addEventListener("click", () => {
 detailClose2.addEventListener("click", () => {
   detailBox.classList.add("hidden");
 });
+
+// skill progress
+const skillBars = document.querySelectorAll(".skill-bar");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const targetWidth = bar.getAttribute("data-progress");
+
+        bar.style.width = targetWidth + "%";
+
+        observer.unobserve(bar); // animate only once
+      }
+    });
+  },
+  {
+    threshold: 0.4, // triggers when 40% visible
+  }
+);
+
+// Observe each bar
+skillBars.forEach((bar) => observer.observe(bar));
