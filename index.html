@@ -135,7 +135,7 @@
       - #main-content
     -->
 
-      <div class="main-content">
+      <div class="main-content relative">
         <!--
         - #NAVBAR
       -->
@@ -195,46 +195,52 @@
             <h3 class="h3 service-title">Process</h3>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 md:sm:grid-cols-4 font-poppins">
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center relative">
                 <div
-                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
                   <img
                     src="./assets/images/icon-design.svg
                 "
                     alt="design icon"
                     width="40" />
                 </div>
+                <div
+                  class="absolute top-[31%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
                 <p class="text-white !pt-4" style="font-weight: 500">
                   Creating a concent
                 </p>
               </div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center relative">
                 <div
-                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
                   <img
                     src="./assets/images/icon-dev.svg"
                     alt="Web development icon"
                     width="40" />
                 </div>
+                <div
+                  class="absolute top-[31%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
                 <p class="text-white !pt-4" style="font-weight: 500">
                   Budget Planning
                 </p>
               </div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center relative">
                 <div
-                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
                   <img
                     src="./assets/images/icon-app.svg"
                     alt="mobile app icon"
                     width="40" />
                 </div>
+                <div
+                  class="absolute top-[31%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
                 <p class="text-white !pt-4" style="font-weight: 500">
                   Design Process
                 </p>
               </div>
               <div class="flex flex-col items-center">
                 <div
-                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
                   <img
                     src="./assets/images/icon-photo.svg"
                     alt="camera icon"
@@ -800,7 +806,7 @@
             <h2 class="h2 article-title">Portfolio</h2>
           </header>
 
-          <section class="projects">
+          <section class="projects relative">
             <ul
               class="filter-list text-[#d6d6d6] flex gap-4 item-center flex-wrap hover:text-[#ffdb70] !mb-4 !sm:mb-0">
               <li class="filter-item">
@@ -848,6 +854,57 @@
                   <button data-select-item>Web development</button>
                 </li>
               </ul>
+            </div>
+
+            <!-- project detials -->
+            <!-- PROJECT POPUP -->
+            <!-- FULL PROJECT DETAILS -->
+            <div
+              id="project-detail"
+              class="hidden w-full h-full min-h-screen absolute top-0 left-0 bg-[#0f0f0f] text-white !z-50 overflow-y-auto"
+              style="scrollbar-width: none">
+              <button
+                id="detail-close"
+                class="absolute top-1 right-4 !text-[30px] font-bold hover:text-red-400">
+                &times;
+              </button>
+
+              <div class="max-w-7xl m-auto !py-10 !px-8 gap-12 mt-10">
+                <!-- LEFT TEXT -->
+
+                <!-- RIGHT IMAGE -->
+                <div class="flex items-center w-full justify-center">
+                  <img
+                    id="detail-img"
+                    src=""
+                    alt="project image"
+                    class="rounded-xl shadow-2xl w-full max-h-[400px] object-cover" />
+                </div>
+                <!-- project detials -->
+                <div>
+                  <h1
+                    id="detail-title"
+                    class="text-4xl !my-6 font-bold mb-4"></h1>
+                  <p id="detail-desc" class="opacity-80 leading-relaxed"></p>
+                  <h2 class="text-xl font-semibold pt-6">Languages</h2>
+                  <div id="detail-tech" class="flex flex-wrap gap-2 mb-6"></div>
+
+                  <!-- <div class="flex gap-1">
+                    <p
+                      id="detail-tech"
+                      class="opacity-80 text-[#fbd86f] rounded-full !px-3 bg-[#ffdb6e1f] border border-[#fbd86f] !mb-6"></p>
+                    <p
+                      id="detail-tech2"
+                      class="opacity-80 text-[#fbd86f] rounded-full !px-3 bg-[#ffdb6e1f] border border-[#fbd86f] !mb-6"></p>
+                    <p
+                      id="detail-tech3"
+                      class="opacity-80 text-[#fbd86f] rounded-full !px-3 bg-[#ffdb6e1f] border border-[#fbd86f] !mb-6"></p>
+                  </div> -->
+                  <p id="detail-category" class="text-lg opacity-80 !mb-4"></p>
+
+                  <!-- <h2 class="text-xl font-semibold">Description</h2> -->
+                </div>
+              </div>
             </div>
 
             <ul class="project-list">
@@ -955,7 +1012,7 @@
                       loading="lazy" />
                   </figure>
 
-                  <h3 class="project-title">DSM.</h3>
+                  <h3 class="project-title">DSM</h3>
 
                   <p class="project-category">Web design</p>
                 </a>
@@ -1021,7 +1078,7 @@
                       loading="lazy" />
                   </figure>
 
-                  <h3 class="project-title">Task Manager</h3>
+                  <h3 class="project-title">TaskManager</h3>
 
                   <p class="project-category">Applications</p>
                 </a>

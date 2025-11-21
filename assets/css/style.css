@@ -126,8 +126,9 @@
 }
   .font-poppins{
     font-family: 'Poppins', sans-serif;
+    font: #ffdb6e1f;
   }
-  
+
 a { text-decoration: none; }
 
 li { list-style: none; }
@@ -1885,4 +1886,52 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+
+/* popup */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: #1e1e1f;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  animation: popupFade 0.3s ease;
+}
+
+.popup-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #fafafa;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@keyframes popupFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

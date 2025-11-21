@@ -151,3 +151,136 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+// popup for project detials
+// PROJECT DATA
+const projectData = {
+  Finance: {
+    title: "Finance",
+    category: "Web Development",
+    tech: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-1.jpg",
+  },
+
+  // ADD YOUR OTHER 8 PROJECTS HERE
+  Orizon: {
+    title: "Orizon",
+    category: "Web Development",
+    tech: ["React", "Node.js"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-2.png",
+  },
+  Fundo: {
+    title: "Fundo",
+    category: "Web Development",
+    tech: ["React", "Node.js"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-3.jpg",
+  },
+  Brawlhalla: {
+    title: "Brawlhalla",
+    category: "Web Development",
+    tech: ["React", "Node.js"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-4.png",
+  },
+  DSM: {
+    title: "DSM.",
+    category: "Web design",
+    tech: ["Figma", "Canva"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-4.png",
+  },
+  MetaSpark: {
+    title: "MetaSpark",
+    category: "Web design",
+    tech: ["Figma", "Canva"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-5.png",
+  },
+  Summary: {
+    title: "MetaSpark",
+    category: "Web development",
+    tech: ["React", "Node.js"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-6.png",
+  },
+  Summary: {
+    title: "MetaSpark",
+    category: "Web development",
+    tech: ["React", "Node.js"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-7.png",
+  },
+  TaskManager: {
+    title: "TaskManager",
+    category: "App development",
+    tech: ["FLutter", "Dart", "React Native"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-8.jpg",
+  },
+  Arrival: {
+    title: "Arrival",
+    category: "Web development",
+    tech: ["React", "Node.js"],
+    description:
+      "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
+    img: "./assets/images/project-9.png",
+  },
+};
+
+// ELEMENTS
+const detailBox = document.getElementById("project-detail");
+const detailClose = document.getElementById("detail-close");
+
+const dImg = document.getElementById("detail-img");
+const dTitle = document.getElementById("detail-title");
+const dCat = document.getElementById("detail-category");
+const dTech = document.getElementById("detail-tech");
+const dDesc = document.getElementById("detail-desc");
+
+// OPEN DETAILS ON CLICK
+document.querySelectorAll(".project-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const title = item.querySelector(".project-title").innerText;
+
+    const p = projectData[title];
+
+    // Fill content
+    dImg.src = p.img;
+    dTitle.innerText = p.title;
+    dCat.innerText = `Category: ${p.category}`;
+    // dTech.innerText = p.tech;
+    dDesc.innerText = p.description;
+    // Clear previous badges
+    dTech.innerHTML = "";
+
+    // Create badges
+    p.tech.forEach((t) => {
+      const badge = document.createElement("span");
+      badge.className =
+        " py-2 !my-4 text-[#fbd86f] rounded-full !px-3 bg-[#ffdb6e1f] border border-[#fbd86f] !text-[15px] font-medium";
+      badge.innerText = t;
+
+      dTech.appendChild(badge);
+    });
+
+    // Show detail section
+    detailBox.classList.remove("hidden");
+  });
+});
+
+// CLOSE DETAIL
+detailClose.addEventListener("click", () => {
+  detailBox.classList.add("hidden");
+});
