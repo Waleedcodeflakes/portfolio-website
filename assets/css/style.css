@@ -119,6 +119,12 @@
   #RESET
 \*-----------------------------------*/
 
+@layer components {
+  .active {
+    @apply text-[#ffdb70] font-semibold border-b-2 border-[#ffdb70];
+  }
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -1627,7 +1633,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button:hover { color: var(--light-gray-70); }
 
-  .filter-item button.active { color: var(--orange-yellow-crayola); }
+  .filter-item button.active { color: #ffdb70; }
 
   /* portfolio and blog grid */
 

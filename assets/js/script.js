@@ -20,37 +20,6 @@ const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-};
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-  testimonialsItem[i].addEventListener("click", function () {
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector(
-      "[data-testimonials-title]"
-    ).innerHTML;
-    modalText.innerHTML = this.querySelector(
-      "[data-testimonials-text]"
-    ).innerHTML;
-
-    testimonialsModalFunc();
-  });
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
@@ -87,24 +56,10 @@ const filterFunc = function (selectedValue) {
 };
 
 // add event in all filter button items for large screen
-// let lastClickedBtn = filterBtn[0];
-
-// for (let i = 0; i < filterBtn.length; i++) {
-//   filterBtn[i].addEventListener("click", function () {
-//     let selectedValue = this.innerText.toLowerCase();
-//     selectValue.innerText = this.innerText;
-//     filterFunc(selectedValue);
-
-//     lastClickedBtn.classList.remove("active");
-//     this.classList.add("active");
-//     lastClickedBtn = this;
-//   });
-// }
-
 let lastClickedBtn = filterBtn[0];
 
-filterBtn.forEach((btn) => {
-  btn.addEventListener("click", function () {
+for (let i = 0; i < filterBtn.length; i++) {
+  filterBtn[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
@@ -113,7 +68,21 @@ filterBtn.forEach((btn) => {
     this.classList.add("active");
     lastClickedBtn = this;
   });
-});
+}
+
+// let lastClickedBtn = filterBtn[0];
+
+// filterBtn.forEach((btn) => {
+//   btn.addEventListener("click", function () {
+//     let selectedValue = this.innerText.toLowerCase();
+//     selectValue.innerText = this.innerText;
+//     filterFunc(selectedValue);
+
+//     lastClickedBtn.classList.remove("text-[#ffdb70]");
+//     this.classList.add("text-[#ffdb70]");
+//     lastClickedBtn = this;
+//   });
+// });
 
 // contact form variables
 const form = document.querySelector("[data-form]");
@@ -195,7 +164,7 @@ const projectData = {
     tech: ["Figma", "Canva"],
     description:
       "A clean financial dashboard with charts and analytics.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sit magnam consequuntur recusandae quos odit provident, voluptate eaque corrupti facere.",
-    img: "./assets/images/project-4.png",
+    img: "./assets/images/project-5.png",
   },
   MetaSpark: {
     title: "MetaSpark",
@@ -242,6 +211,7 @@ const projectData = {
 // ELEMENTS
 const detailBox = document.getElementById("project-detail");
 const detailClose = document.getElementById("detail-close");
+const detailClose2 = document.getElementById("detail-close2");
 
 const dImg = document.getElementById("detail-img");
 const dTitle = document.getElementById("detail-title");
@@ -282,5 +252,8 @@ document.querySelectorAll(".project-item").forEach((item) => {
 
 // CLOSE DETAIL
 detailClose.addEventListener("click", () => {
+  detailBox.classList.add("hidden");
+});
+detailClose2.addEventListener("click", () => {
   detailBox.classList.add("hidden");
 });
