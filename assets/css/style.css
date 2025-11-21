@@ -164,7 +164,9 @@ body { background: var(--smoky-black); }
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
-
+.hidden-x{
+  display: none;
+}
 .sidebar,
 article {
   background: var(--eerie-black-2);
@@ -302,7 +304,7 @@ article.active {
 
 main {
   margin: 15px 12px;
-  /* margin-bottom: 75px; chnaged */
+  margin-bottom: 75px;
   min-width: 259px;
 }
 
@@ -315,13 +317,13 @@ main {
 \*-----------------------------------*/
 
 .sidebar {
-  /* margin-bottom: 15px; changed */
+  margin-bottom: 15px;
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 105px; }
+.sidebar.active { max-height: 405px; }
 
 .sidebar-info {
   position: relative;
@@ -1319,7 +1321,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   main {
     margin-top: 30px;
-    /* margin-bottom: 100px; changed */
+    margin-bottom: 100px;
   }
 
 
@@ -1331,7 +1333,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar {
     max-height: 180px;
     margin-bottom: 30px;
-    /* margin-top: 30px; */
   }
 
   .sidebar.active { max-height: 584px; }
@@ -1685,9 +1686,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * MAIN 
    */
 
-  main { 
-    /* margin-bottom: 60px;  changed  */
-  }
+  main { margin-bottom: 60px; }
 
   .main-content {
     position: relative;
@@ -1828,11 +1827,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar {
     position: sticky;
-    top: 0px;
+    top: 30px;
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;
-    /* padding-top: 60px; changed */
+    /* padding-top: 20px; */
     z-index: 1;
   }
 
