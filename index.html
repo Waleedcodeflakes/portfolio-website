@@ -26,6 +26,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet" />
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
   <body>
@@ -144,7 +146,7 @@
               <button class="navbar-link active" data-nav-link>About</button>
             </li>
 
-            <li class="navbar-item">
+            <li class="navbar-item hidden-x">
               <button class="navbar-link" data-nav-link>Resume</button>
             </li>
 
@@ -188,10 +190,65 @@
             </p>
           </section>
 
+          <!-- process -->
+          <section class="service">
+            <h3 class="h3 service-title">Process</h3>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:sm:grid-cols-4 font-poppins">
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  <img
+                    src="./assets/images/icon-design.svg
+                "
+                    alt="design icon"
+                    width="40" />
+                </div>
+                <p class="text-white !pt-4" style="font-weight: 500">
+                  Creating a concent
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40" />
+                </div>
+                <p class="text-white !pt-4" style="font-weight: 500">
+                  Budget Planning
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40" />
+                </div>
+                <p class="text-white !pt-4" style="font-weight: 500">
+                  Design Process
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-gray-100 rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="camera icon"
+                    width="40" />
+                </div>
+                <p class="text-white !pt-4" style="font-weight: 500">
+                  Building your Dream
+                </p>
+              </div>
+            </div>
+          </section>
           <!--
           - service
         -->
-
           <section class="service">
             <h3 class="h3 service-title">Services</h3>
 
@@ -270,6 +327,83 @@
             </ul>
           </section>
 
+          <section class="service">
+            <h3 class="h3 service-title">Skills</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg
+                "
+                    alt="design icon"
+                    width="40" />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web design</h4>
+
+                  <p class="service-item-text">
+                    The most modern and high-quality design made at a
+                    professional level.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40" />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+
+                  <p class="service-item-text">
+                    High-quality development of sites at the professional level.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40" />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                  <p class="service-item-text">
+                    Professional development of applications for iOS and
+                    Android.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="camera icon"
+                    width="40" />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Photography</h4>
+
+                  <p class="service-item-text">
+                    I make high-quality photos of any category at a professional
+                    level.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
           <!--
           - testimonials
         -->
@@ -667,7 +801,8 @@
           </header>
 
           <section class="projects">
-            <ul class="filter-list">
+            <ul
+              class="filter-list text-[#d6d6d6] flex gap-4 item-center flex-wrap hover:text-[#ffdb70] !mb-4 !sm:mb-0">
               <li class="filter-item">
                 <button class="active" data-filter-btn>All</button>
               </li>
@@ -685,7 +820,7 @@
               </li>
             </ul>
 
-            <div class="filter-select-box">
+            <div class="filter-select-box hidden-x">
               <button class="filter-select" data-select>
                 <div class="select-value" data-selecct-value>
                   Select category
