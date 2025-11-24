@@ -281,3 +281,13 @@ const observer = new IntersectionObserver(
 
 // Observe each bar
 skillBars.forEach((bar) => observer.observe(bar));
+
+// show details of process
+document.querySelectorAll(".process-step").forEach((step) => {
+  step.addEventListener("mouseenter", () => {
+    step.querySelector(".description").style.maxHeight = "80px";
+  });
+  step.addEventListener("mouseleave", () => {
+    step.querySelector(".description").style.maxHeight = "0";
+  });
+});
