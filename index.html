@@ -35,18 +35,26 @@
     - #MAIN
   -->
 
-    <main>
+    <main class="relative">
       <!--
       - #SIDEBAR
     -->
+    <aside class="sidebar relative z-10" id="sidebar"  data-sidebar>
+        <div id="toggleSidebar"
+          class="absolute hidden lg:block top-0 right-[-19px] h-full w-6 bg-[#f8d66d] rounded-r-full flex items-center justify-center cursor-pointer shadow-lg">
+        <ion-icon id="sidebarIcon"
+                  name="chevron-down"
+                  class="!text-white rotate-[90deg] absolute top-[2%] z-50 left-[-30px]"
+                  style="font-size: 26px !important;">
+        </ion-icon>
+      </div>
 
-      <aside class="sidebar" data-sidebar>
         <div class="sidebar-info">
           <figure class="avatar-box">
             <img
               src="./assets/images/avatar-3.png"
               alt="Hifza Kanwal"
-              width="80" />
+              width="40" />
           </figure>
 
           <div class="info-content">
@@ -59,26 +67,27 @@
           <div class="info-content m-2 hidden md:block">
             <h1 class="name !text-lg">Place Order Now</h1>
             <div class="flex gap-2 !mb-2 !w-full">
-              <a
-                href="https://wa.me/923281223062"
-                target="_blank"
-                class="title !flex !w-[57%] !gap-1 !items-center !text-[14px] !text-[#ffdb70]">
-                <ion-icon name="logo-whatsapp"></ion-icon>
-                Whatsapp
-              </a>
+             
               <a
                 href="mailto:hifzakanwal.official@gmail.com"
                 class="title !flex !gap-1 !w-[42%] !items-center !text-[14px] !text-[#ffdb70]">
                 <ion-icon name="mail-outline"></ion-icon>
                 Email
               </a>
-            </div>
-            <a
+              <a
               href="#"
-              class="title !flex !gap-1 !w-full !justify-center !items-center !text-[14px] !text-[#ffdb70]">
+              class="title !flex !gap-1 !w-[57%] !justify-center !items-center !text-[14px] !text-[#ffdb70]">
               <ion-icon name="logo-instagram"></ion-icon>
               Instagram
             </a>
+            </div>
+             <a
+                href="https://wa.me/923281223062"
+                target="_blank"
+                class="title !flex !w-[100%] !justify-center !gap-1 !items-center !text-[14px] !text-[#ffdb70]">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+                Whatsapp
+              </a>
           </div>
           <button class="info_more-btn" data-sidebar-btn>
             <span>Show Contacts</span>
@@ -121,8 +130,8 @@
               <div class="icon-box relative !z-10">
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
-              <div
-                class="absolute w-[1px] h-full bg-[#7d6e41] left-[11%] rounded-full top-[60%] z-8"></div>
+              <!-- <div
+                class="absolute w-[1px] h-full bg-[#7d6e41] left-[11%] rounded-full top-[60%] z-8"></div> -->
 
               <div class="contact-info">
                 <p class="contact-title">Email</p>
@@ -138,8 +147,8 @@
               <div class="icon-box relative !z-10">
                 <ion-icon name="phone-portrait-outline"></ion-icon>
               </div>
-              <div
-                class="absolute w-[1px] h-full bg-[#7d6e41] rounded-full left-[11%] top-[60%] z-8"></div>
+              <!-- <div
+                class="absolute w-[1px] h-full bg-[#7d6e41] rounded-full left-[11%] top-[60%] z-8"></div> -->
 
               <div class="contact-info">
                 <p class="contact-title">Phone</p>
@@ -168,7 +177,7 @@
 
           <div class="separator"></div>
 
-          <ul class="social-list">
+          <ul class="social-list !mt-0">
             <li class="social-item">
               <a href="#" class="social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
@@ -194,12 +203,21 @@
           </ul>
         </div>
       </aside>
+  <div id="toggleSidebar2"
+     class="absolute top-0 left-[-19px] h-full w-6 bg-[#f8d66d] rounded-r-full flex items-center justify-center cursor-pointer shadow-lg">
 
+  <ion-icon id="sidebarIcon2"
+            name="chevron-down"
+            class="!text-white rotate-[-90deg] absolute top-[2%] z-50 right-[-30px]"
+            style="font-size: 26px !important;">
+  </ion-icon>
+
+</div>
       <!--
       - #main-content
     -->
 
-      <div class="main-content relative">
+      <div class="main-content relative" id="mainContent">
         <!--
         - #NAVBAR
       -->
@@ -264,18 +282,18 @@
               ><br />
             </p>
             <div
-              class="grid grid-cols-1 sm:grid-cols-3 md:sm:grid-cols-3 font-poppins">
+              class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 font-poppins !mb-20">
               <div class="process-step group flex flex-col items-center relative cursor-pointer">
                 <div
-                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[60px] h-[60px] flex items-center justify-center">
                   <img
                     src="./assets/images/icon-design.svg
                 "
                     alt="design icon"
-                    width="40" />
+                    width="32" />
                 </div>
                 <div
-                  class="hidden sm:block absolute top-[31%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
+                  class="hidden sm:block absolute top-[25%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
                 <p
                   class="text-white !pt-4 pb-4 text-[13px] text-center sm:pb-0"
                   style="font-weight: 400">
@@ -298,14 +316,14 @@
               </div>
               <div class="group cursor-pointer flex flex-col items-center relative">
                 <div
-                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[60px] h-[60px] flex items-center justify-center">
                   <img
                     src="./assets/images/mobile-dev.png"
                     alt="Web development icon"
-                    width="40" />
+                    width="32" />
                 </div>
                 <div
-                  class="hidden sm:block absolute top-[31%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
+                  class="hidden sm:block absolute top-[25%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
                 <p
                   class="text-white !pt-4 pb-4 text-[13px] sm:pb-0"
                   style="font-weight: 400">
@@ -321,14 +339,14 @@
               </div>
               <div class="group cursor-pointer flex flex-col items-center relative">
                 <div
-                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[60px] h-[60px] flex items-center justify-center">
                   <img
                     src="./assets/images/dev-icon.png"
                     alt="mobile app icon"
-                    width="40" />
+                    width="32" />
                 </div>
                 <div
-                  class="hidden sm:block absolute top-[85%] left-[50%] -translate-x-1/2 w-[1px] h-full bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
+                  class="hidden sm:block absolute top-[25%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
                 <p
                   class="text-white !pt-4 pb-4 text-[13px] sm:pb-0"
                   style="font-weight: 400">
@@ -342,16 +360,63 @@
                   I build web and mobile apps that work perfectly.
                 </div>
               </div>
-              <div class="group cursor-pointer flex flex-col items-center !mt-28 relative">
+              <div class="group cursor-pointer flex flex-col items-center relative !mt-28 sm:!mt-0">
                 <div
-                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
+                  class="bg-[#ffdb6e1f] rounded-full w-[60px] h-[60px] flex items-center justify-center">
+                  <img
+                    src="./assets/images/testing.png"
+                    alt="camera icon"
+                    width="32" />
+                </div>
+                <div
+                  class="hidden sm:block absolute top-[25%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
+                <p
+                  class="text-white !pt-4 pb-4 text-[13px] text-center sm:pb-0"
+                  style="font-weight: 400">
+                  Testing <br/>& Feedback
+                </p>
+                <div
+                  class="absolute top-[100%] left-1/2 -translate-x-1/2 bg-[#ffffff15] backdrop-blur-md 
+                        text-white text-center !p-3 text-xs w-[180px] p-3 rounded-lg opacity-0 
+                        group-hover:opacity-100 group-hover:translate-y-2 
+                        transition-all duration-300">
+                   I make sure everything runs smoothly and is easy to use.
+                </div>
+              </div>
+              
+               <div class="group cursor-pointer flex flex-col items-center relative !mt-28 sm:!mt-0">
+                <div
+                  class="bg-[#ffdb6e1f] rounded-full w-[60px] h-[60px] flex items-center justify-center">
+                  <img
+                    src="./assets/images/rocket.png"
+                    alt="camera icon"
+                    width="32" />
+                </div>
+                <div
+                  class="hidden sm:block absolute top-[25%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
+                <p
+                  class="text-white !pt-4 pb-4 text-[13px] text-center sm:pb-0"
+                  style="font-weight: 400">
+                  Launch <br/> & Maintenance
+                </p>
+                 <div
+                  class="absolute top-[100%] left-1/2 -translate-x-1/2 bg-[#ffffff15] backdrop-blur-md 
+                        text-white text-center !p-3 text-xs w-[180px] p-3 rounded-lg opacity-0 
+                        group-hover:opacity-100 group-hover:translate-y-2 
+                        transition-all duration-300">
+                   I deliver your project and keep it running without issues.
+                </div>
+              </div>
+
+              <div class="group cursor-pointer flex flex-col items-center !mt-28 sm:!mt-0 relative">
+                <div
+                  class="bg-[#ffdb6e1f] rounded-full w-[60px] h-[60px] flex items-center justify-center">
                   <img
                     src="./assets/images/social-media-marketing.png"
                     alt="camera icon"
-                    width="40" />
+                    width="32" />
                 </div>
-                <div
-                  class="hidden sm:block absolute top-[31%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
+                
                 <p
                   class="text-white !pt-4 pb-4 text-[13px] sm:pb-0"
                   style="font-weight: 400">
@@ -366,50 +431,6 @@
                 </div>
               </div>
               
-              <div class="group cursor-pointer flex flex-col items-center relative !mt-28">
-                <div
-                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
-                  <img
-                    src="./assets/images/rocket.png"
-                    alt="camera icon"
-                    width="40" />
-                </div>
-                <div
-                  class="hidden sm:block absolute top-[31%] left-2/2 -translate-x-1/2 w-[68%] h-[1px] bg-[#ffdb6e6c] z-10 rounded-full shadow-md"></div>
-                <p
-                  class="text-white !pt-4 pb-4 text-[13px] text-center sm:pb-0"
-                  style="font-weight: 400">
-                  Launch <br/> & Maintenance
-                </p>
-                 <div
-                  class="absolute top-[100%] left-1/2 -translate-x-1/2 bg-[#ffffff15] backdrop-blur-md 
-                        text-white text-center !p-3 text-xs w-[180px] p-3 rounded-lg opacity-0 
-                        group-hover:opacity-100 group-hover:translate-y-2 
-                        transition-all duration-300">
-                   I deliver your project and keep it running without issues.
-                </div>
-              </div>
-              <div class="group cursor-pointer flex flex-col items-center relative !mt-28">
-                <div
-                  class="bg-[#ffdb6e1f] rounded-full w-[70px] h-[70px] flex items-center justify-center">
-                  <img
-                    src="./assets/images/testing.png"
-                    alt="camera icon"
-                    width="40" />
-                </div>
-                <p
-                  class="text-white !pt-4 pb-4 text-[13px] text-center sm:pb-0"
-                  style="font-weight: 400">
-                  Testing <br/>& Feedback
-                </p>
-                <div
-                  class="absolute top-[100%] left-1/2 -translate-x-1/2 bg-[#ffffff15] backdrop-blur-md 
-                        text-white text-center !p-3 text-xs w-[180px] p-3 rounded-lg opacity-0 
-                        group-hover:opacity-100 group-hover:translate-y-2 
-                        transition-all duration-300">
-                   I make sure everything runs smoothly and is easy to use.
-                </div>
-              </div>
             </div>
           </section>
           <!--
@@ -532,7 +553,7 @@
             </ul>
           </section>
 
-          <section class="skill !mb-10">
+          <!-- <section class="skill !mb-10">
             <h3 class="h3 skills-title">Skills</h3>
 
             <ul class="skills-list content-card">
@@ -600,7 +621,7 @@
                 </div>
               </li>
             </ul>
-          </section>
+          </section> -->
         </article>
 
         <!--
@@ -849,7 +870,7 @@
                     id="detail-img"
                     src=""
                     alt="project image"
-                    class="rounded-xl shadow-2xl w-full max-h-[400px] object-cover" />
+                    class="rounded-xl shadow-2xl w-full max-h-[600px] object-cover" />
                 </div>
                 <!-- project detials -->
                 <div>
@@ -1155,6 +1176,7 @@
     <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!-- icons cdn -->
 
     <!-- email js cdn to send emails -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

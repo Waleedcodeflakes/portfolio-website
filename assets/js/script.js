@@ -291,3 +291,40 @@ document.querySelectorAll(".process-step").forEach((step) => {
     step.querySelector(".description").style.maxHeight = "0";
   });
 });
+
+// toggle sidebar
+const sidebar2 = document.getElementById("sidebar");
+const main = document.getElementById("mainContent");
+
+const toggleInside = document.getElementById("toggleSidebar");
+const toggleOutside = document.getElementById("toggleSidebar2");
+
+function updateBars() {
+  const isClosed = sidebar2.classList.contains("closed");
+
+  // If sidebar is closed → show outside bar
+  toggleOutside.style.display = isClosed ? "flex" : "none";
+
+  // Inside bar always visible (since it's attached to sidebar)
+}
+
+toggleInside.onclick = () => {
+  sidebar2.classList.toggle("closed");
+  main.classList.toggle("expanded");
+  updateBars();
+};
+
+toggleOutside.onclick = () => {
+  sidebar2.classList.toggle("closed");
+  main.classList.toggle("expanded");
+  updateBars();
+};
+
+// Initial state sync
+updateBars();
+// change icon direction
+// if (sidebar2.classList.contains("closed")) {
+//   icon.setAttribute("name", "chevron-forward");
+// } else {
+//   icon.setAttribute("name", "chevron-back");
+// }
